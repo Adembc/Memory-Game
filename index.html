@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="control-btn">
+        <input type="text" placeholder="Type Your Name " id="input-name">
+        <div class="form__group">
+            <input type="radio" name="level" id="easy" data-time="60">
+            <label for="easy"> Easy</label>
+        </div>
+        <div class="form__group">
+            <input type="radio" name="level" id="meduim" data-time="45">
+            <label for="meduim"> Meduium</label>
+        </div>
+        <div class="form__group">
+            <input type="radio" name="level" id="hard" data-time="30">
+            <label for="hard"> Hard</label>
+        </div>
+        
+        <span>Start Game</span>
+    </div>
+    <div class="info">
+        <div class="name">
+            Hello : <span></span>
+        </div>
+        <div class="timer">
+            <span></span> Second
+        </div>
+        <div class="tries">
+            Wrong Tries : <span>0</span>
+        </div>
+    </div>
+        <div class="game-block">
+            <div class="box" data-tech="html">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/html5.png" alt="html5" >
+                </div>
+            </div>
+            <div class="box" data-tech="html">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/html5.png" alt="html5" >
+                </div>
+            </div>
+            <div class="box" data-tech="css">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/css3.png" alt="css3" >
+                </div>
+            </div>
+            <div class="box" data-tech="css">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/css3.png" alt="css3" >
+                </div>
+            </div>
+            <div class="box" data-tech="js">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/jest.png" alt="js" >
+                </div>
+            </div>
+            <div class="box" data-tech="js">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/jest.png" alt="js" >
+                </div>  
+            </div>
+            <div class="box" data-tech="react">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/react.png" alt="react" >
+                </div>  
+            </div>
+            <div class="box" data-tech="react">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/react.png" alt="react" >
+                </div>  
+            </div>
+            <div class="box" data-tech="angular">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/angular.png " alt="angular" >
+                </div>  
+            </div>
+            <div class="box" data-tech="angular">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/angular.png " alt="angular" >
+                </div>  
+            </div>
+            <div class="box" data-tech="vue">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/vuejs.png " alt="vue" >
+                </div>  
+            </div>
+            <div class="box" data-tech="vue">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/vuejs.png " alt="vue" >
+                </div>  
+            </div>
+            <div class="box" data-tech="github">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/github.png " alt="github" >
+                </div>  
+            </div>
+            <div class="box" data-tech="github">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/github.png " alt="github" >
+                </div>  
+            </div>
+            <div class="box" data-tech="python">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/python.png " alt="python" >
+                </div>  
+            </div>
+            <div class="box" data-tech="python">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/python.png " alt="python" >
+                </div>  
+            </div>
+            <div class="box" data-tech="mongo">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/mongodb.png " alt="mongo" >
+                </div>  
+            </div>
+            <div class="box" data-tech="mongo">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/mongodb.png " alt="mongo" >
+                </div>  
+            </div>
+            <div class="box" data-tech="gulpjs">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/gulpjs.png " alt="gulpjs" >
+                </div>  
+            </div>
+            <div class="box" data-tech="gulpjs">
+                <div class="side front"></div>
+                <div class="side back">
+                    <img src="images/gulpjs.png " alt="gulpjs" >
+                </div>  
+            </div>
+            
+    </div>
+
+
+    
+    <audio src="audio/start.wav" id="start" preload="auto"></audio>
+    <audio src="audio/10sec.mp3" id="warn" preload="auto"></audio>
+    <audio src="audio/success.mp4" id="success" preload="auto"></audio>
+    <audio src="audio/fail.mp4" id="fail" preload=""></audio>
+    <div class="pop-up win hide">
+        <div class="content">
+            <h1>You win</h1>      
+        <div class="score"> Score : <span></span> </div>
+        <h3 class="best">
+            Best Score : <span class="best-score"></span> By <span class="best-name"></span>
+        </h3>
+            <button class="change" onclick="location.reload()"> Restart</button>
+        </div>
+    </div>
+    <div class="pop-up lose hide">
+        <div class="content">
+            <h1>You lose</h1>
+            <h3 class="best">
+                Best Score : <span class="best-score"></span> By <span class="best-name"></span>
+            </h3>
+            <button class="change" onclick="location.reload()"> Restart</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
